@@ -1,40 +1,42 @@
-// var span1 = document.getElementById("span1");
-// span1.addEventListener("mouseover" , mouseover);
-// span1.addEventListener("mouseout" , mouseout);
+let li1 = document.getElementById("li1");
+let mark1 = document.getElementById("mark1");
+changes(li1,mark1);
 
-// function mouseover(){
-//     document.getElementById("span1").style.color = "white";
-//     document.getElementById("p1").style.paddingLeft = "20px";
-//     setTimeout(function () {
-//         document.getElementById("p1").style.paddingLeft = "";
-//         document.getElementById("span1").style.color = "black";
-//     }, 1500);
-// }
-// function mouseout(){
-//     setTimeout(function () {
-//         document.getElementById("span1").style.color = "black";
-//     }, 1500);
-// }
+let li2 = document.getElementById("li2");
+let mark2 = document.getElementById("mark2");
+changes(li2,mark2);
+
+let li3 = document.getElementById("li3");
+let mark3 = document.getElementById("mark3");
+changes(li3,mark3);
+
+let li4 = document.getElementById("li4");
+let mark4 = document.getElementById("mark4");
+changes(li4,mark4);
+
+let li5 = document.getElementById("li5");
+let mark5 = document.getElementById("mark5");
+changes(li5,mark5);
 
 
-var Arrayparagraphs = document.getElementsByName("paragraph");
-var ArraySpans = document.getElementsByName("span");
 
-for (let a = 0 ; a < ArraySpans.length ; a++){
-    ArraySpans[a].addEventListener("mouseover" , mouseover);
-    ArraySpans[a].addEventListener("mouseout" , mouseout);
-}
 
-function mouseover(event){
-   event.target.style.color = "white";
-   event.target.style.paddingLeft = "20px";
-    setTimeout(function () {
-        event.target.style.paddingLeft = "";
-        event.target.style.color = "black";
-        }, 1500);
-}
-function mouseout(){
-    setTimeout(function () {
-        event.target.style.color = "black";
-    }, 1500);
+
+function changes (x , y){
+x.addEventListener("mouseover" , function(){
+    x.style.marginLeft="3em";
+    x.style.color="white";
+    x.style.transitionDuration="2s";
+    // var mark1 = document.getElementById("mark1");
+   y.style.marginLeft="3em";
+   y.style.transitionDuration="2s";
+},false);
+
+x.addEventListener("mouseout" , function(){
+    x.style.marginLeft="0";
+    x.style.color="black";
+    x.style.transitionDuration="2s";
+   y.style.marginLeft="0";
+   y.style.transitionDuration="2s";
+},false);
 }

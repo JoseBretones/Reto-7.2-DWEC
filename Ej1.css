@@ -11,3 +11,16 @@ h1,h3{
 .span {
     color: black;
 }
+#listMark li {
+    color: white;
+    text-decoration: none;
+}
+#listContent li {
+    color: black;
+    text-decoration: none;
+    padding-top: 3px;
+}
+ul {
+    float: left;
+    list-style: none;
+}
