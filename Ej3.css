@@ -1,0 +1,7 @@
+body{
+    margin: 30px;
+}
+
+#pH, #pM, #pB, #pL, #pMgg {
+   display:none;
+}
