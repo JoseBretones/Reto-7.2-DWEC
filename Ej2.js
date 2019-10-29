@@ -24,12 +24,25 @@ function add(){
 }
 
 function remove(){
-    var lastTr = document.getElementById("table").lastChild;
-    lastTr.setAttribute("id" , "lastTr");
-    var lastTd = document.getElementById("lastTr").lastChild;
-    lastTr.removeChild(lastTd);
-    lastTr.removeAttribute("lastTr");
-    count--;
+    // var lastTr = document.getElementById("table").lastChild;
+    // lastTr.setAttribute("id" , "lastTr");
+    // var lastTd = document.getElementById("lastTr").lastChild;
+    // lastTr.removeChild(lastTd);
+    // lastTr.removeAttribute("lastTr");
+    // count--;
+    var myRowArray = document.getElementsByTagName("tr");
+    var myCellArray = document.getElementsByTagName("td");
+    if(myCellArray.length>0){
+        let lastRow = myRowArray[myRowArray.length-1];
+        if((myCellArray.length+1)%7 != 0){
+        lastRow.removeChild(myCellArray[myCellArray.length-1]);
+        }else{
+            table.removeChild(myRowArray[myRowArray.length-1]);
+            myRowArray.pop();
+        }
+    }else{
+        alert("No hay imagen para borrar");
+    }
     
 }
 
